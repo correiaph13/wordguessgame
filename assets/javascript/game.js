@@ -1,7 +1,6 @@
 //game begins when user presses any key (create a screen for this)
 
 
-
 // JS picks a random item from the word list array; something about math function random
    // JS picks a random item from the word list array; something about math function random
    //find out if i can reference a list from another file
@@ -12,7 +11,9 @@ console.log(elements.indexOf('oxygen'));
 var randomWord = elements[Math.floor(Math.random() * elements.length)];
 
 console.log(randomWord);
-    
+
+document.write(randomWord);
+
 
 // display the empty spaces to user
 
