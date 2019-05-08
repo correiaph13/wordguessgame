@@ -1,7 +1,18 @@
-//game begins when user presses any key (create a scrreen for this)
+//game begins when user presses any key (create a screen for this)
+
+
 
 // JS picks a random item from the word list array; something about math function random
+   // JS picks a random item from the word list array; something about math function random
+   //find out if i can reference a list from another file
+const elements = ['Hydrogen', 'oxygen', 'fluorine', 'argon','mercury'];
 
+console.log(elements.indexOf('oxygen'));
+
+var randomWord = elements[Math.floor(Math.random() * elements.length)];
+
+console.log(randomWord);
+    
 
 // display the empty spaces to user
 
