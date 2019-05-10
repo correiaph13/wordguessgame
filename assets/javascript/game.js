@@ -27,7 +27,15 @@ window.onload = function () {
     var wordToGuessText = document.getElementById("wordToGuess");
     var guessesLeftText = document.getElementById("guessesLeftText");
     var lettersIncorrectText = document.getElementById("lettersIncorrectText");
+    var answerArrayText = document.getElementById("answerArrayText");
     
+    var answerArray = [];{
+    for (var i = 0; i < wordToGuess.word.length; i++) {
+     answerArray[i] = "_";
+    }
+    var remainingLetters = wordToGuess.word.length;       
+           
+    }
     
     // Display the user and computer guesses, and wins/losses/ties
           winsText.textContent = "wins: " + wins;
@@ -35,13 +43,27 @@ window.onload = function () {
           wordToGuessText.textContent = "your word is: " + wordToGuess.word;
           guessesLeftText.textContent = "remaining guesses: " + guessesLeft;
           lettersIncorrectText.textContent = "incorrect letters: "+ letttersIncorrect;
+          answerArrayText.textContent = "Word to Guess: " + answerArray;
           
     // This function is run whenever the user presses a key.
-    document.onkeyup = function(event) {
-    // Determines which key was pressed.
-    var userGuess = event.key;
-          
-    console.log(userGuess)};
+           
+    var guess = event.key;
+    // if (guess === null) {
+    // } else if (guess.length !== 1) {
+    // console.log("Please enter a single letter.")
+    // }
+     
+    
+    // } else {
+    // // Update the game state with the guess
+    // }
+    
+    console.log(answerArray);
+    
+    console.log(wordToGuess.word);
+    
+    console.log(guess);
+    
            
     };
     
