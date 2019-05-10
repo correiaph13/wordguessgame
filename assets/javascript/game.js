@@ -1,8 +1,8 @@
 window.onload = function () {
 
     // var wordToGuess //wordToGuess
-    
-    var lettersGuessed = event.key;//letters guessed
+    //letters guessed
+    var lettersGuessedText
     
     var letttersIncorrect = ["h","j"];
     
@@ -28,6 +28,7 @@ window.onload = function () {
     var guessesLeftText = document.getElementById("guessesLeftText");
     var lettersIncorrectText = document.getElementById("lettersIncorrectText");
     var answerArrayText = document.getElementById("answerArrayText");
+    var userGuess = document.getElementById("userGuessText");
     
     var answerArray = [];{
     for (var i = 0; i < wordToGuess.word.length; i++) {
@@ -35,7 +36,14 @@ window.onload = function () {
     }
     var remainingLetters = wordToGuess.word.length;       
            
-    }
+    };
+    
+           
+    
+    document.onkeyup = function(event) {
+         userGuess.textContent = event.key;
+    };
+    
     
     // Display the user and computer guesses, and wins/losses/ties
           winsText.textContent = "wins: " + wins;
@@ -44,25 +52,19 @@ window.onload = function () {
           guessesLeftText.textContent = "remaining guesses: " + guessesLeft;
           lettersIncorrectText.textContent = "incorrect letters: "+ letttersIncorrect;
           answerArrayText.textContent = "Word to Guess: " + answerArray;
+          userGuess.textContent = "You chose: " + userGuess;
           
-    // This function is run whenever the user presses a key.
-           
-    var guess = event.key;
-    // if (guess === null) {
-    // } else if (guess.length !== 1) {
-    // console.log("Please enter a single letter.")
-    // }
-     
     
-    // } else {
-    // // Update the game state with the guess
-    // }
     
     console.log(answerArray);
     
     console.log(wordToGuess.word);
     
-    console.log(guess);
+    // console.log(userGuess);
+    
+    
+    
+    
     
            
     };
