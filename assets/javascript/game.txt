@@ -1,0 +1,75 @@
+//navigate to githib.io page 
+
+//things to track; wins v loses; put into as a cookie to keep stats (bc we're all overachievers here)
+//log in and create account as web service lol
+
+//event trigger is made when user presses any key
+// show "how to play" on left side;
+// you have 6 guesses
+
+//wordbank
+const wordBank =
+        [{
+            word:"hydrogen",
+            difficulty:"easy"
+        },{
+            word:"oxygen",
+            difficulty:"easy"
+        },{
+            word:"Einstenium"
+            difficulty:"medium"
+        }]
+    
+//game configuration
+var gameConfiguration = 
+    {
+        maxGuesses:6
+    };
+gameConfiguration["wordBank"]=wordBank;
+
+
+
+
+// game ends when word is not guessed after 6 guesses or the word is completely shown
+//
+
+
+
+//game begins when user presses any key (create a screen for this)
+
+
+
+document.onkeyup = function(event) {
+
+
+// JS picks a random item from the word list array; something about math function random
+   // JS picks a random item from the word list array; something about math function random
+   //find out if i can reference a list from another file
+
+
+const elements = ['Hydrogen', 'oxygen', 'fluorine', 'argon','mercury'];
+
+console.log(elements.indexOf('oxygen'));
+
+var randomWord = elements[Math.floor(Math.random() * elements.length)];
+
+console.log(randomWord);
+
+document.write(randomWord);
+
+
+// display the empty spaces to user
+
+
+//user uses keyboard to guess letters (event)
+
+// once user pics a letter, check if it is in the string; if its not then mark as a miss, if it is as a hit
+
+// missed letters will be added to the new array of wrong leters and displayed on the side somewhere
+
+//missed letters will also add to the number of misses (how many allowed?) and add to the graph counter?
+
+
+
+// hits will display the letter in the word 
+
