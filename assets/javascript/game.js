@@ -4,18 +4,42 @@
 // JS picks a random item from the word list array; something about math function random
    // JS picks a random item from the word list array; something about math function random
    //find out if i can reference a list from another file
-const elements = ['Hydrogen', 'oxygen', 'fluorine', 'argon','mercury'];
 
-console.log(elements.indexOf('oxygen'));
+
+
+// document.onkeyup = function(event)
+
+const elements = ['Hydrogen', 'oxygen', 'fluorine', 'argon','mercury'];
 
 var randomWord = elements[Math.floor(Math.random() * elements.length)];
 
-console.log(randomWord);
+var userText = document.getElementById("user-text");
 
+      // Next, we give JavaScript a function to execute when onkeyup event fires.
+     
+
+console.log(randomWord);
 document.write(randomWord);
 
+// <p>Click the button to check where if the string includes the specified value.</p>
 
-// display the empty spaces to user
+// <button onclick="myFunction()">Try it</button>
+
+
+// //  document.onkeyup = function(letterFind) {
+// //         userText.textContent = event.key;
+// //       };
+
+// <p id="letterGuess"></p>
+
+//    function letterFind() {
+
+// // var userText = str.includes(randomWord);
+
+//   document.getElementById("letterGuess").innerHTML = n;
+// }
+// if function myFunction == true
+//  console.log("got one");
 
 
 //user uses keyboard to guess letters (event)
