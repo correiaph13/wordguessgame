@@ -38,8 +38,6 @@ window.onload = function () {
          
   };
   
-         
-  
   document.onkeyup = function(event) {
        userGuess.textContent = event.key;
   };
