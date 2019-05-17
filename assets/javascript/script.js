@@ -38,6 +38,7 @@ window.onload = function () {
   
   document.onkeyup = function(event) {
     let userGuess = event.key;
+    wordToGuess.word = wordToGuess.word.toLowerCase();
     for (var j = 0; j < wordToGuess.word.length; j++)
      {
        if (wordToGuess.word[j] === userGuess) {
