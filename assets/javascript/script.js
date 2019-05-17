@@ -37,16 +37,20 @@ window.onload = function () {
          
   
   document.onkeyup = function(event) {
-       let userGuess = event.key;
-       for (var j = 0; j < wordToGuess.word.length; j++);
-        {
-          if (wordToGuess.word[j] === userGuess) {
-        answerArrayText[i] = userGuess;
-        remainingLetters--;
-       }
-       console.log(userGuess);
-       console.log(answerArray);
-       console.log(wordToGuess.word);
+    let userGuess = event.key;
+    for (var j = 0; j < wordToGuess.word.length; j++);
+     {
+       if (wordToGuess.word[j] === userGuess) {
+        answerArray[i] = wordToGuess.word[j];
+        answerArrayText.textContent = "Word to Guess: " + answerArray.join(' ');
+     remainingLetters--;
+    }
+    console.log(userGuess);
+    console.log(answerArray);
+    console.log(wordToGuess.word);
+    console.log(answerArrayText.textContent = "Word to Guess: " + answerArray.join(' '));
+    
+
        
   }};
   
