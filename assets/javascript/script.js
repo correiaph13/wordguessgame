@@ -27,6 +27,7 @@ window.onload = function () {
   var userText = document.getElementById("user-text");
   
   var answerArray = [];
+  var wordHolder =[];
   
   for (var i = 0; i < wordToGuess.word.length; i++) 
   {
@@ -34,15 +35,21 @@ window.onload = function () {
   }
   var remainingLetters = wordToGuess.word.length;       
          
-document.onkeyup = function(event) {
+  
+  document.onkeyup = function(event) {
        let userGuess = event.key;
-       for (var j = wordToGuess.word.length; j < remainingLetters; j++);
-        {if (wordToGuess[j] === userGuess) {
-        answerArray[j] = userGuess;
+       for (var j = 0; j > wordToGuess.word.length; j++);
+        {
+          if (wordToGuess.word[j] == userGuess) {
+        answerArrayText[i] = userGuess;
+        remainingLetters--;
        }
        console.log(userGuess);
+       console.log(answerArray);
+       console.log(wordToGuess.word);
        
   }};
+  
 
 
   
@@ -55,7 +62,7 @@ document.onkeyup = function(event) {
         // lettersIncorrectText.textContent = "incorrect letters: "+ letttersIncorrect;
         answerArrayText.textContent = "Word to Guess: " + answerArray;
         
-        // userGuess = ("You chose: " + userGuess);
+
   
   
   console.log(answerArray);
