@@ -38,9 +38,9 @@ window.onload = function () {
   
   document.onkeyup = function(event) {
        let userGuess = event.key;
-       for (var j = 0; j > wordToGuess.word.length; j++);
+       for (var j = 0; j < wordToGuess.word.length; j++);
         {
-          if (wordToGuess.word[j] == userGuess) {
+          if (wordToGuess.word[j] === userGuess) {
         answerArrayText[i] = userGuess;
         remainingLetters--;
        }
